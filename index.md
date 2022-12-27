@@ -1,110 +1,212 @@
-# 2022.10.11
+# 2022.12.25 - 2022.12.27
 
-1. java 的源文件以 .java 为拓展名
+## 类和对象
 
-2. 一个源文件只能有一个 public 类
+1. 什么是类？什么是对象？
 
-3. java 程序的执行入口： main(), 有固定的书写格式
+   - 现实世界是由很多很多对象组成的  
+     基于这些对象，抽出了类
+   - 类:类型、类别，代表一类个体  
+     对象:一个独立的个体
+   - 类是一种数据类型(引用类型)
+   - 类中可以包含:
+     - 所有对象所共有的属性/特征----变量
+     - 所有对象所共有的行为---------方法
+   - 一个类可以创建多个对象
 
-4. java 严格区分大小写 String 和 string
+     - 同一个类创建的对象，结构相同，数据不同
 
-5. 语句以分号 （英文 / 半角） 结束
+       | 对象   | 类(类型) |
+       | ------ | -------- |
+       | 蔡志荣 | 老师     |
+       | 陈平生 | 老师     |
+       | 班主任 | 老师     |
 
-6. 输出内容不换行， 使用 print()
+       | 对象 | 类   |
+       | ---- | ---- |
+       | 张三 | 学生 |
+       | 李四 | 学生 |
+       | 王五 | 学生 |
 
-7. java 注释有三种， 单行注释、 多行注释、 文档注释
-   
-   - 单行： //
-   - 多行： /*.....*/
-   - 文档： /**.....*/
+       | 对象 | 类  |
+       | ---- | --- |
+       | 小花 | 狗  |
+       | 小黑 | 狗  |
+       | 小强 | 狗  |
 
-8. 文档注释标签语法
-   
-   - @author 标明开发该模块的作者
-   - @version 标明类的版本
-   - @see 说明相关主题
-   - @param 对方法中某参数的解释说明
-   - @return 对方法返回值的说明
-   - @exception 对方法中可能抛出的异常说明
+   - 类是对象的模板，对象是类的具体的实例
 
-9. 数据类型：
-   
-   - int 整型： 4，-21
-   - long 长整型： 很大 5L, 25L, 250L
-   - double 浮点型： 5.3, 3.1415926 浮点型字面值常量默认 double 表示 float 常量后加 f 或 F float floatNum = 3.14F
-   - boolean 布尔型：true、 false
-   - char 字符型： 'Hello 22物联3班的同学们：' 引号引起来
+2. 如何创建类?如何创建对象?----代码操作
 
-10. 数据类型间的转换
-    
-    - 自动： 从小到大
-    - 强制： "123" + 123
+   ```java
+   修饰词 Class 类名{
 
-11. 标识符和关键字
-    
-    - 标识符命名规则
-      
-      > 1. 由数字、 字母、 _ 、 $ 组成， 但是不能以数字开头
-      > 2. 不能是关键字
-      > 3. 大小写敏感A a 没有长度限制
-      > 4. 可以使用中文但不推荐
+   }
+   Public class Cell{
 
-# 2022.10.14
+   }
+   数据类型   引用类型变量       对象
+   Cell      c1             = new Cell();
+   Cell      c2             = new Cell();
 
-1. 标识符的命名规范
-   - 变量和方法名：第一个单词以小写的字母开头，后面的每个单词以大写的字母开头（小驼峰写法） stuAge、 sendMEssage 变量尽量用名词 方法尽量用动词
-   - 类名：每一个单词的首字母都需要大写，如果包含单词缩写，缩些的每个字母都应该大写 XMLMoudle 类名尽量选名词
-   - 常量：通常全部用大写字母，由多个单词构成的常量同下划线分割单词  MAX_VALUE
-   - 包名：通常全部用小写
-   - 变量：值可以被改变 首字母只能是 字母/汉字、下划线、$/￥，其余的字母只能是字母/汉字、下划线、$/￥、数字
-     - 变量类型 变量名 变量
-     - type vaeName [=value]
-     - int num1 = 10;
-     - double cube = 987.654
-     - Student stu = new Student();//定义一个学生对象(student)
+   Dog d1 = new Dog();
+   Dog d2 = new Dog();
 
-# 2022.10.21
+   Car car1 = new Car();
+   Car car2 = new Car();
 
-1. 运算符
-   - 算数运算符
-   - 关系运算符：==（数值相等） ===（数值相等， 数据类型相等）
-   - 赋值运算符：a += 2 a = a + 2
-   - 逻辑运算符：与、或、非  2 > 1 && 3 > 4
+   class Teacher{  //老师类
+       String name;
+       int age;
+       String address;
+       double salary;  //共有的属性
+       void eat(){}
+       void sleep(){}
+       void teach(){}  //共有的行为
+   }
+   class Student{  //学生类
+       String name;
+       int age;
+       String address;
 
-# 2022.10.25
+       void eat(){}
+       void sleep(){}
+       void study(){}
+   }
+   class Car{
+       String color;
+       double price;
+       String type;
+       void run(){}
+       void stop(){}
+   }
 
-1. 输入一个年份，判断该年份是否为闰年（被4整除）
-2. 练习：随机生成一个年份，判断是否为闰年
-3. 完善闰年年份
+   class Dog{
+       String name;
+       String type;
+       String color;
+       double price;
+       void eat(){}
+       void sleep(){}
+       void run(){}
+   }
 
-# 2022.10.28
+   创建对象
+   Student zs = new Student(); //创建对象
+   Student ls = new Student(); //创建对象
+   Student ww = new Student(); //创建对象
 
-1. 流程控制语句
-   - if 有三种形式：
-     - 第一种：if(表达式){代码块}
-     - 第二种：if(表达式){代码块A}else{代码块B}
-     - 第三种：if(表达式1){代码块A}else if(表达式2){代码块B}else if(表达式3){代码块C}...else{代码块X}
-   - 使用第三种实现成绩等级查询
-     - <60：不合格
-     - 60-75：合格
-     - 75-84：良好
-     - 85-100：优秀
-     - \>100：输入有误
-   - switch 语句的语法结构
-     - switch(表达式){
-        case 常量1:
-          代码块1;
-          break;
-        case 常量2:
-          代码块2;
-          break;
-        .
-        .
-        .
-        default:
-          代码块X;
-          break;
+   zs.name = "zhangsan";
+   zs.age = 37;
+   zs.address = "河北廊坊";
+   zs.eat();
+   zs.sleep();
+   zs.study();
+
+   ls.name = "lisi";
+   ls.age = 26;
+   ls.address = "黑龙江佳木斯";
+   ls.eat();
+   ls.sleep();
+   ls.study();
+   ```
+
+3. 引用类型之间画等号:指向同一个对象  
+   房子-----对象  
+   钥匙-----引用  
+   对其中的一个修改，会影响另外一个  
+   eg:家门钥匙  
+   基本类型之间画等号:赋值  
+   对其中的一个修改，不会影响另外一个  
+   eg:身份证复印件  
+   配一把钥匙给你  
+   房子-----------  
+   房子这个对象只有一个  
+   钥匙这个引用有两个
+4. null 和 NullPointerException  
+   null:空，意为不再指向任何对象  
+   引用值为 null，则不能再进行操作了  
+   若操作，则发生空指针异常(NullPointerException)
+
+## 方法重载、构造方法和引用类型数组
+
+1. 方法签名: 方法名+参数列表
+2. 方法的重载(Overload):
+   - 方法名相同，参数列表不同，称为方法的重载
+   - 编译器在编译时根据签名绑定调用不同的方法
+3. 构造方法:
+   - 常常用于给成员变量赋初值
+   - 与类同名，没有返回值类型
+   - 在创建对象时被自动调用
+   - 若自己不写构造，则编译器默认提供一个无参构造  
+     若自己写了构造，则编译器不再默认提供
+   - 构造方法可以重载
+4. this:指代当前对象，哪个对象调指的就是哪个对象  
+   在方法中访问成员变量，默认有个 this.  
+   this 用法:
+   1. ```java
+      this.成员变量名---访问成员变量
+      ```
+   2. ```java
+      this.方法名()-----调用方法
+      ```
+   3. ```java
+      this()------------调用构造方法
+      ```
+5. 引用类型数组
+   1. ```java
+      Cell[] cells = new Cell[4];
+      cells[0] = new Cell(1,2);
+      cells[1] = new Cell(3,4);
+      cells[2] = new Cell(5,6);
+      cells[3] = new Cell(7,8);
+      ```
+   2. ```java
+      Cell[] cells = new Cell[]{
+        new Cell(1,2),
+        new Cell(3,4),
+        new Cell(5,6),
+        new Cell(7,8)
+      };
+      ```
+   3. ```java
+      int[][] arr = new int[3][];
+      arr[0] = new int[2];
+      arr[1] = new int[3];
+      arr[2] = new int[2];
+      arr[1][0] = 100; //arr中第2个元素中的第1个元素
+      ```
+   4. ```java
+      int[][] arr = new int[3][4];
+      for(int i=0;i<arr.length;i++){
+        for(int j=0;j<arr[i].length;j++){
+            arr[i][j] = 100;
+        }
+      }
+      ```
+6. 重载样例
+
+   ```java
+   //重载的演示
+
+   public class OverloadDemo {
+       public static void main(String[] args) {
+           Aoo o = new Aoo();
+           o.show();
+           o.show("zhangsan");
+           o.show(25);
+           o.show("zhangsan",25);
+           o.show(25,"zhangsan");
        }
-   - while/do-while
-   - for
-   - 跳转语句
+   }
+
+   class Aoo{
+       void show(){}
+       void show(String name){}
+       void show(int age){}
+       void show(String name,int age){}
+       void show(int age,String name){}
+       //int show(){} //编译错误，与返回值类型无关
+       //void show(String address){} //编译错误，与参数名称无关
+   }
+   ```
