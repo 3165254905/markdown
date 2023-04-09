@@ -20,8 +20,7 @@
 
 ## 要求
 
-1. [ShareAnswer](https://yrf.pub/answer)Lv10 以上
-2. 22 物联 3、22 物联 2
+1. [ShareAnswer](https://yrf.pub/answer)Lv10 以上（嫌麻烦钞能力 27.5 ￥ 带走）
 
 ## 规则、介绍
 
