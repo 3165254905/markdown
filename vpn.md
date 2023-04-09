@@ -20,7 +20,7 @@
 
 ## 要求
 
-1. [ShareAnswer](https://yrf.pub/answer)Lv10 以上（嫌麻烦钞能力 27.5 ￥ 带走）
+1. [ShareAnswer](https://yrf.pub/answer)Lv10 以上免费领取（嫌麻烦钞能力 27.5 ￥ 带走）
 
 ## 规则、介绍
 
