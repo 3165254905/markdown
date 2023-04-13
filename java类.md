@@ -5,21 +5,21 @@
 </script>
 <!-- TOC -->
 
-- [Java 类](#java-%E7%B1%BB)
+- [定义变量](#%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F)
+- [定义类](#%E5%AE%9A%E4%B9%89%E7%B1%BB)
+- [实例化类](#%E5%AE%9E%E4%BE%8B%E5%8C%96%E7%B1%BB)
 
 <!-- /TOC -->
 
-# Java 类
-
 以下的 Demo,demo 都可以随意替换为一个你想起的名字
 
-1. 定义变量
+# 定义变量
 
 ```java
 String demo;
 ```
 
-2. 定义类
+# 定义类
 
 ```java
 class Demo{
@@ -27,7 +27,7 @@ class Demo{
 }
 ```
 
-3. 实例化类
+# 实例化类
 
 ```java
 Demo demo = new Demo();
