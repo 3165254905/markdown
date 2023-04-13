@@ -3,6 +3,13 @@
     const a = h1.querySelector(`a`)
     if (a.href===`https://mark.yrf.pub/`) h1.style.display = 'none'
 </script>
+<!-- TOC -->
+
+- [Java 类](#java-%E7%B1%BB)
+
+<!-- /TOC -->
+
+# Java 类
 
 以下的 Demo,demo 都可以随意替换为一个你想起的名字
 
